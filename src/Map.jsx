@@ -76,7 +76,7 @@ export default function Map({ mapRef }) {
       >
         <FeatureGroup ref={mapRef}>
           <EditControl
-            position="topright"
+            position="bottomleft"
             draw={{
               polyline: true,
               polygon: false,
@@ -166,3 +166,11 @@ function DetectDraw() {
   })
   return null
 }
+
+
+/*
+The algorithm in src/Map.jsx calculates distance by:
+--> Extracting coordinates when a route is drawn.
+--> Using Leaflet's map.distance to calculate distances between consecutive points.
+--> Summing these distances to get the total distance.
+*/

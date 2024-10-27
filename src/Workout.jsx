@@ -1,23 +1,23 @@
-import { useNavigate } from "react-router-dom"
-import { useDispatch } from "react-redux"
-import { FaTrash, FaPen } from "react-icons/fa"
-import toast from "react-hot-toast"
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { FaTrash, FaPen } from "react-icons/fa";
+import toast from "react-hot-toast";
 
-import { formatDate } from "./utils/helpers"
-import { removeExercise } from "./features/exercise/exerciseSlice"
-import { setIsEditing, setShowForm } from "./features/app/appSlice"
+import { formatDate } from "./utils/helpers";
+import { removeExercise } from "./features/exercise/exerciseSlice";
+import { setIsEditing, setShowForm } from "./features/app/appSlice";
 
 export default function Workout({ exercise }) {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { id, date, type, distance, duration, coords, city, countryCode } =
-    exercise
-  const dateStr = formatDate(date)
+    exercise;
+  const dateStr = formatDate(date);
 
   function handleChangeCenter(coords) {
-    const [lat, lng] = coords
-    dispatch(setShowForm(false))
-    navigate(`form?lat=${lat}&lng=${lng}&id=${id}`)
+    const [lat, lng] = coords;
+    dispatch(setShowForm(false));
+    navigate(`form?lat=${lat}&lng=${lng}&id=${id}`);
   }
 
   function handleRemove(id) {
@@ -35,11 +35,11 @@ export default function Workout({ exercise }) {
           <button
             className="btn-confirm btn-confirm--yes"
             onClick={() => {
-              toast.dismiss(t.id)
-              dispatch(removeExercise(id))
-              dispatch(setShowForm(false))
-              navigate("/")
-              toast.success("Exercise removed")
+              toast.dismiss(t.id);
+              dispatch(removeExercise(id));
+              dispatch(setShowForm(false));
+              navigate("/");
+              toast.success("Exercise removed");
             }}
           >
             Yes
@@ -52,14 +52,14 @@ export default function Workout({ exercise }) {
           </button>
         </div>
       </span>
-    ))
+    ));
   }
 
   function handleEdit(e, id) {
-    e.stopPropagation()
-    dispatch(setShowForm(true))
-    dispatch(setIsEditing(true))
-    navigate(`form?id=${id}&lat=${coords[0]}&lng=${coords[1]}`)
+    e.stopPropagation();
+    dispatch(setShowForm(true));
+    dispatch(setIsEditing(true));
+    navigate(`form?id=${id}&lat=${coords[0]}&lng=${coords[1]}`);
   }
 
   return (
@@ -107,12 +107,14 @@ export default function Workout({ exercise }) {
       </div>
       <div className="buttons-container">
         <button className="btn-delete" onClick={() => handleRemove(id)}>
-          <FaTrash />
+         {/* This is the delete icon */}
+          <FaTrash />    
         </button>
         <button className="btn-edit" onClick={(e) => handleEdit(e, id)}>
-          <FaPen />
+        {/* This is the edit icon */}
+          <FaPen />  
         </button>
       </div>
     </li>
-  )
+  );
 }
