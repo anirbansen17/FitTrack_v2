@@ -1,20 +1,27 @@
 
-FitTrack_v2 
+# FitTrack_v2 
+### The updated version of FitTrack
 
 
-FitTrack is an application that allows users to record and view their workouts on a map. Users can add two different types of workouts, such as running, cycling, and see their workout routes displayed on the map. Original project is from Jonas Schmedtmann which is part of his course. This version is built with React.
-
-Features
-
-add workout to your list
-remove workout from your list
-remove all workouts together
-sort workouts by date,distance and duration
-filter workouts by type
-use your location to start adding workout
-reverse geocoding to pre-fill form with city name
-pre-fill form with distance defined by route that user create
-workouts saved to local storage
+FitTrack_v2 is a comprehensive fitness tracking application designed to help users monitor their exercise routines, track progress, and achieve their fitness goals.
 
 
-live : https://anirbansen17-fittrack-v2.netlify.app/
+
+
+
+
+## Features
+
+- Add Workouts: Log workouts with type, duration, and distance.
+- Delete Workouts: Remove individual or all workouts at once.
+- Sort Workouts: Organize by date, distance, or duration.
+- Filter by Type: View only running or cycling workouts.
+- Geolocation: Start a workout using your current location.
+- Reverse Geocoding: Autofill location with city name.
+- Route Distance: Automatically calculates distance from route.
+- Local Storage: Save workouts across sessions.
+
+## Demo
+
+https://github.com/user-attachments/assets/4f89b1f5-a096-4a45-bc2c-09e6d6a6234a
+
