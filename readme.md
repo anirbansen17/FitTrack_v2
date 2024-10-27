@@ -1,6 +1,8 @@
-Mapty (React version)
 
-Mapty is an application that allows users to record and view their workouts on a map. Users can add two different types of workouts, such as running, cycling, and see their workout routes displayed on the map. Original project is from Jonas Schmedtmann which is part of his course. This version is built with React.
+FitTrack_v2 
+
+
+FitTrack is an application that allows users to record and view their workouts on a map. Users can add two different types of workouts, such as running, cycling, and see their workout routes displayed on the map. Original project is from Jonas Schmedtmann which is part of his course. This version is built with React.
 
 Features
 
@@ -13,3 +15,6 @@ use your location to start adding workout
 reverse geocoding to pre-fill form with city name
 pre-fill form with distance defined by route that user create
 workouts saved to local storage
+
+
+live : https://anirbansen17-fittrack-v2.netlify.app/
